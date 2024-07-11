@@ -152,13 +152,13 @@ const Home = () => {
     return () => {};
   }, []);
   return (
-    <>
+    <div className='min-h-screen dark:bg-black bg-white'>
     <Navbar 
   userInfo={userInfo} 
   onSearchNote={onSearchNote} 
   handleClearSearch={handleClearSearch}
 />
-<div className="container mx-auto bg-white dark:bg-black pt-5 pb-5 md:pt-16 flex-grow">
+<div className=" container mx-auto pt-5 pb-5 md:pt-16 flex-grow">
   {allNotes.length > 0 ? (
     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-5 md:gap-5 mt-0 mx-6 sm:mx-4 md:mx-7'>
       {allNotes.map((item, index) => (
@@ -202,7 +202,7 @@ const Home = () => {
     },
   }}
   contentLabel=""
-  className="w-full sm:w-[70%] md:w-[40%] lg:w-[40%] max-h-[80%] bg-lightpurple border-black dark:bg-stone-800 border-2 dark:border-none rounded-md mx-auto mt-20 p-5 overflow-y-scroll overscroll-contain"
+  className="w-full sm:w-[70%] md:w-[40%] lg:w-[40%] max-h-[80%] bg-cpurple border-black dark:bg-stone-800 border-2 dark:border-none rounded-md mx-auto mt-20 p-5 overflow-y-scroll overscroll-contain"
 >
   <AddEditNotes 
     type={openAddEditModal.type}
@@ -220,7 +220,7 @@ const Home = () => {
   type={showToastMsg.type}
   onClose={handleCloseToast}
 />
-</>
+</div>
 
   )
 }

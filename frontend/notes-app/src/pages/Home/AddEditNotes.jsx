@@ -108,7 +108,7 @@ const AddEditNotes = ({noteData, type, getAllNotes, onClose, showToastMessage}) 
             <label className='input-label text-lg sm:text-sm md:text-base lg:text-lg dark:text-zinc-200'>TITLE</label>
             <input
             type='text'
-            className='text-2xl sm:text-xl md:text-2xl lg:text-2xl bg-cpurple text-zinc-200 pt-1 pb-1 dark:bg-neutral-900 rounded dark:text-zinc-200 px-2'
+            className='text-2xl sm:text-xl md:text-2xl lg:text-2xl bg-lightpurple text-zinc-200 pt-1 pb-1 dark:bg-neutral-900 rounded dark:text-zinc-200 px-2'
             placeholder='Add your Title'
             value={title}
             onChange={( {target} ) => setTitle(target.value)}
@@ -119,7 +119,7 @@ const AddEditNotes = ({noteData, type, getAllNotes, onClose, showToastMessage}) 
             <label className='input-label text-xs sm:text-sm md:text-base lg:text-lg dark:text-zinc-200'>CONTENT</label>
             <textarea
                 type="text"
-                className='text-xs sm:text-sm md:text-base lg:text-lg bg-cpurple text-zinc-200 dark:text-zinc-200 dark:bg-neutral-900 px-2 p-2 rounded'
+                className='text-xs sm:text-sm md:text-base lg:text-lg bg-lightpurple text-zinc-200 dark:text-zinc-200 dark:bg-neutral-900 px-2 p-2 rounded'
                 placeholder='Elaborate your note'
                 rows={10}
                 value={content}
@@ -127,7 +127,7 @@ const AddEditNotes = ({noteData, type, getAllNotes, onClose, showToastMessage}) 
             />
         </div>
         <div className='mt-3'>
-        <label className='input-label text-xs sm:text-sm md:text-base lg:text-lg dark:text-zinc-200'>To Do List</label>
+        <label className='input-label text-xs sm:text-sm md:text-base lg:text-lg dark:text-zinc-200'>TO DO LIST</label>
         <Todo tasks={tasks} setTasks={setTasks} noteId={noteId} />
         </div>
         <div className='mt-3'>
@@ -137,7 +137,7 @@ const AddEditNotes = ({noteData, type, getAllNotes, onClose, showToastMessage}) 
 
         {error && <p className='text-red-500 text-xs pt-4 sm:text-sm md:text-base lg:text-lg'>{error}</p>}
 
-        <button className='btn-primary bg-cpurple text-zinc-200 text-lg dark:bg-blue-900 font-medium mt-5 p-3 sm:p-3 md:p-4 hover:scale-95 transition-all ease-in-out' 
+        <button className='btn-primary bg-lightpurple text-zinc-200 text-lg dark:bg-blue-900 font-medium mt-5 p-3 sm:p-3 md:p-4 hover:scale-95 transition-all ease-in-out' 
         onClick={handleAddNote}
         >{type === 'edit' ? 'UPDATE' : 'ADD'}</button>
     </div>

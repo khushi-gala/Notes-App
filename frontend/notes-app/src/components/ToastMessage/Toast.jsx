@@ -23,7 +23,7 @@ const Toast = ({ isShown, message, type, onClose}) => {
     }`}
     >
       <div
-      className={`min-w-52 bg-white dark:bg-neutral-700 border shadow-2xl rounded-md after:w-[5px] after:h-full ${
+      className={`min-w-52 bg-white dark:bg-neutral-800 border shadow-2xl rounded-md after:w-[5px] after:h-full ${
         type === "delete" ? "after:bg-red-500" : "after:bg-green-500"
       } after:absolute after:left-0 after:top-0 after:rounded-l-lg`}
       >

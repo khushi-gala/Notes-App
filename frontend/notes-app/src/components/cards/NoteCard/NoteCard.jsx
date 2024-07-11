@@ -13,7 +13,7 @@ const NoteCard = ({
   onPinNote,
 }) => {
   return (
-    <div className="mx-4 my-4 relative rounded p-4 h-44 w-full sm:w-auto bg-lightpurple hover:border-black dark:bg-stone-900 dark:hover:bg-neutral-800 hover:scale-95 transition-all ease-in-out dark:hover:border-blue-900 hover:border-2"
+    <div className=" my-4 relative rounded p-4 h-44 w-full sm:w-auto bg-lightpurple hover:border-black dark:bg-stone-900 dark:hover:bg-neutral-800 hover:scale-95 transition-all ease-in-out dark:hover:border-blue-900 hover:border-2"
     onDoubleClick={onEdit}
     >
   <div className="flex items-center justify-between">

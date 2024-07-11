@@ -42,12 +42,12 @@ const Todo = ({tasks, setTasks, noteId }) => {
         <div className='flex items-center gap-4 mt-3 '>
             <input type='text' 
             value={inputValue}
-            className='outline-none bg-zinc-200 dark:bg-neutral-900 dark:border-gray-300 mr-0 rounded flex-grow p-2 dark:text-zinc-200 mt-0' 
+            className='outline-none bg-lightpurple dark:bg-neutral-900 dark:border-gray-300 mr-0 rounded flex-grow p-2 dark:text-zinc-200 mt-0 placeholder:text-zinc-200' 
             placeholder='Add Tasks' 
             onChange={handleInputChange}
             onKeyDown={handleKeyDown}
             />
-            <button className='w-8 h-8 sm:w-10 sm:h-10 items-center justify-center rounded bg-cpurple dark:bg-blue-900 hover:scale-125 transition-all ease-in-out'
+            <button className='w-8 h-8 sm:w-10 sm:h-10 items-center justify-center rounded bg-lightpurple dark:bg-blue-900 hover:scale-125 transition-all ease-in-out'
             onClick={() => {
                 addNewTask();
             }}
@@ -60,7 +60,7 @@ const Todo = ({tasks, setTasks, noteId }) => {
             <div>
             {/* <div className='flex items-center gap-2 flex-wrap mt-2 text-gray-300'> */}
                 {tasks.map((task, index) => (
-                    <div key={index} className=' relative flex items-center gap-2 mt-2 w-52 text-sm bg-cpurple text-zinc-200 dark:text-gray-300 dark:hover:bg-stone-700 dark:hover:text-zinc-200 dark:bg-neutral-900 px-3 py-1 rounded'>
+                    <div key={index} className=' relative flex items-center gap-2 mt-2 w-52 text-sm bg-lightpurple text-zinc-200 dark:text-gray-300 dark:hover:bg-stone-700 dark:hover:text-zinc-200 dark:bg-neutral-900 px-3 py-1 rounded'>
                          {task.task}
                         <BsFillTrashFill className='cursor-pointer ml-2 mt-1 mr-2 absolute right-0 text-zinc-200' 
                         onClick={() => {

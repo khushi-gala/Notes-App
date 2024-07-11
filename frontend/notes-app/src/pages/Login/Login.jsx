@@ -50,7 +50,7 @@ const Login = ()=> {
     <div className="bg-gray-100 dark:bg-black min-h-screen min-w-screen flex flex-col">
     <LoginSignUpNav />
     <div className="flex items-center justify-center mt-10 md:mt-20">
-      <div className="w-11/12 sm:w-96 border rounded bg-white dark:bg-stone-800 dark:border-none dark:shadow-none px-7 py-8 shadow-md shadow-gray-400">
+      <div className="w-11/12 sm:w-96 border rounded bg-white dark:bg-stone-800 dark:border-none dark:shadow-none px-7 py-6 shadow-md shadow-gray-400">
         <form onSubmit={handleLogin}>
           <h4 className="text-3xl mb-2 py-5 pt-0 text-center text-black dark:text-zinc-300">Login</h4>
           <input
