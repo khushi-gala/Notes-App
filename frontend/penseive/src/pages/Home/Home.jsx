@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from '../../components/Navbar/Navbar'
 import NoteCard from '../../components/cards/NoteCard/NoteCard'
-import { MdAdd, MdOutlineAlarmAdd } from 'react-icons/md'
+import { MdAdd } from 'react-icons/md'
 import AddEditNotes from './AddEditNotes'
 import Modal from 'react-modal'
 // import moment from 'moment'
