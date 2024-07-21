@@ -7,7 +7,7 @@ const Navbar = ( {userInfo, onSearchNote, handleClearSearch } ) => {
   const navigate = useNavigate();
   const onLogout = () => {
     localStorage.clear()
-    navigate("/login");
+    navigate("/login"); 
   }
   const handleSearch = () => {
     console.log("Search query:", searchQuery);
