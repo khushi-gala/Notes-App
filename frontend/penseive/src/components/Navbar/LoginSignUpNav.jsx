@@ -6,7 +6,7 @@ const Navbar = ( {userInfo } ) => {
   const navigate = useNavigate();
   const onLogout = () => {
     localStorage.clear()
-    navigate("/login");
+    navigate("/login"); 
   }
   return (
     <div className='bg-cpurple dark:bg-stone-800 px-6 py-2 drop-shadow text-center shadow-md shadow-gray-400 dark:shadow-none dark:border-none sm:h-24 sm:grid-cols-3 h-fit col-span-1 '>
