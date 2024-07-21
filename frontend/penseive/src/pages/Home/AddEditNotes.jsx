@@ -80,42 +80,35 @@ const AddEditNotes = ({ noteData, type, getAllNotes, onClose, showToastMessage }
     }
   };
 
-  useEffect(() => {
-    if (quillRef.current) return; // Prevent re-initialization
-
-    quillRef.current = new Quill(editorRef.current, {
-      theme: 'snow', // 'snow' for rich text toolbar
-      modules: {
-        toolbar: [
-          [{ header: '1' }, { header: '2' }, { font: [] }],
-          [{ list: 'ordered' }, { list: 'bullet' }],
-          ['blockquote', 'code-block'],
-          ['bold', 'italic', 'underline'],
-          [{ color: [] }, { align: [] }],
-        ],
-      },
-    });
-
-    if (quillRef.current) {
-      quillRef.current.root.innerHTML = content;
-      const toolbar = quillRef.current.getModule('toolbar');
-      toolbar.container.classList.add(
+ useEffect(() => {
+        // Initialize Quill editor
+        const quill = new Quill('#editor', {
+          theme: 'snow', // 'snow' for rich text toolbar
+          modules: {
+            toolbar: [
+              [{ 'header': '1' }, { 'header': '2' }, { 'font': [] }],
+              [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+              ['blockquote','code-block'],
+              ['bold', 'italic', 'underline'],
+              [{ 'color': [] }, { 'align': [] }]
+            ],
+          },
+        });
+        quill.root.innerHTML = content;
+        const toolbar = quill.getModule('toolbar');
+            toolbar.container.classList.add(
         'space-x-2', 'bg-zinc-200', 'p-2', 'rounded', 'shadow-sm',
         'text-sm', 'text-slate-950', 'dark:bg-neutral-900', 'dark:text-zinc-200', 'dark:border-neutral-600', 'border-none'
       );
       toolbar.container.style.border = 'none';
-
-      quillRef.current.on('text-change', () => {
-        setContent(quillRef.current.root.innerHTML); // update content state on text change
-      });
-    }
-
-    return () => {
-      if (quillRef.current) {
-        quillRef.current.off('text-change');
-      }
-    };
-  }, [content]); // Make sure the useEffect only runs once
+    
+        quill.on('text-change', () => {
+          setContent(quill.root.innerHTML); // update content state on text change
+        });
+        return () => {
+          quill.off('text-change');
+        };
+      }, []); // run once on component mount
 
   return (
     <div className='relative p-3'>

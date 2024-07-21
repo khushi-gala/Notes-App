@@ -9,7 +9,7 @@ const SearchBar = ({value, onChange, handleSearch, onClearSearch }) => {
     }
   }
 
-  return (
+  return ( 
     <div className='w-80 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl flex items-center px-4 bg-lightpurple  dark:bg-stone-900 dark:hover:bg-stone-700 hover:border-2 hover:border-black dark:hover:border-blue-900 rounded-md hover:scale-95 transition-all ease-in-out'>
   <FaMagnifyingGlass 
     className="dark:text-zinc-400 cursor-pointer dark:hover:text-gray-200 hover:hover:scale-125 transition-all ease-in-out" 

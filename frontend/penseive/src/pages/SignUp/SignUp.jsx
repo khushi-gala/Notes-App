@@ -76,14 +76,14 @@ const SignUp = () => {
           <input
             type="text"
             placeholder="Name"
-            className="input-box bg-lightpurple placeholder:text-neutral-800 dark:placeholder:text-zinc-300 dark:text-zinc-200 dark:bg-stone-900 w-full mb-4"
+            className="input-box bg-lightpurple placeholder:text-neutral-800 text-black dark:placeholder:text-zinc-300 dark:text-zinc-200 dark:bg-stone-900 w-full mb-4"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
           <input
             type="text"
             placeholder="Email"
-            className="input-box bg-lightpurple placeholder:text-neutral-800 dark:placeholder:text-zinc-300 dark:text-zinc-300 dark:bg-stone-900 w-full mb-4"
+            className="input-box bg-lightpurple placeholder:text-neutral-800 text-black dark:placeholder:text-zinc-300 dark:text-zinc-300 dark:bg-stone-900 w-full mb-4"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />

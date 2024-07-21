@@ -6,14 +6,14 @@ const PasswordInput= ({ value, onChange, placeholder }) => {
   const toggleShowPassword = ()=>{
     setIsShowPassword(!isShowPassword);
   }
-  return (
+  return ( 
     <div className='flex items-center bg-lightpurple text-white dark:bg-stone-900 px-5 rounded mb-3'>
       <input 
       value={value}
       onChange={onChange}
       type={isShowPassword ? "text" : "password"}
       placeholder={placeholder || "Password"}
-      className="w-full text-sm dark:text-zinc-300 bg-transparent py-3 mr-3 rounded outline-none placeholder:text-neutral-800 dark:placeholder:text-zinc-300"
+      className="w-full text-sm dark:text-zinc-300 bg-transparent py-3 mr-3 rounded outline-none placeholder:text-neutral-800 text-black dark:placeholder:text-zinc-300"
       />
       { isShowPassword ? (
         <FaRegEye

@@ -10,7 +10,7 @@ const Todo = ({tasks, setTasks, noteId }) => {
     const handleInputChange = (e) => {
         setInputValue(e.target.value);
     }
-    const addNewTask = async () => {
+    const addNewTask = async () => { 
         if (inputValue.trim() !== "") {
           try {
             // console.log('Sending request to:', `/notes/${noteId}/add-task`);
