@@ -87,7 +87,7 @@ const AddEditNotes = ({ noteData, type, getAllNotes, onClose, showToastMessage }
           modules: {
             toolbar: [
               [{ 'header': '1' }, { 'header': '2' }, { 'font': [] }],
-              [{ 'list': 'ordered'}, { 'list': 'bullet' }, { 'list': 'check' }],
+              [{ 'list': 'ordered'}, { 'list': 'bullet' }],
               ['blockquote','code-block'],
               ['bold', 'italic', 'underline'],
               [{ 'color': [] }, { 'align': [] }]
