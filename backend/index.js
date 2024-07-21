@@ -419,5 +419,8 @@ app.delete(`/notes/:noteId/task/:taskIndex/delete`, async (req, res) => {
     }
 });
 
-app.listen(8000);
+const PORT = process.env.PORT || 8000;
+app.listen(PORT, function () {
+    console.log('Example app listening on port 8000!');
+});
 module.exports= app;
