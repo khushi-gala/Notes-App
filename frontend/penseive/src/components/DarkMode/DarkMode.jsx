@@ -9,7 +9,7 @@ const DarkMode = () => {
     return storedDarkMode ? JSON.parse(storedDarkMode) : false;
   });
 
-  useEffect(() => {
+  useEffect(() => { 
     // Update the document's class and store the value in localStorage
     if (darkMode) {
       document.documentElement.classList.add('dark');
