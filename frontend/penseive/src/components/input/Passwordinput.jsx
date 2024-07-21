@@ -13,7 +13,7 @@ const PasswordInput= ({ value, onChange, placeholder }) => {
       onChange={onChange}
       type={isShowPassword ? "text" : "password"}
       placeholder={placeholder || "Password"}
-      className="w-full text-sm dark:text-zinc-300 bg-transparent py-3 mr-3 rounded outline-none placeholder:text-neutral-800 dark:placeholder:text-zinc-300"
+      className="w-full text-sm dark:text-zinc-300 bg-transparent py-3 mr-3 rounded outline-none placeholder:text-neutral-800 text-black dark:placeholder:text-zinc-300"
       />
       { isShowPassword ? (
         <FaRegEye
