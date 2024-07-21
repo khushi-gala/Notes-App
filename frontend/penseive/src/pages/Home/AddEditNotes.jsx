@@ -97,10 +97,10 @@ const AddEditNotes = ({ noteData, type, getAllNotes, onClose, showToastMessage }
         quill.root.innerHTML = content;
         const toolbar = quill.getModule('toolbar');
             toolbar.container.classList.add(
-                'space-x-2', 'bg-slate-100', 'p-2', 'rounded', 'shadow-sm',
-                'text-sm', 'text-slate-950', 'dark:bg-neutral-800', 'dark:border-neutral-600', 'border-none'
-            );
-            toolbar.container.style.border = 'none';
+        'space-x-2', 'bg-zinc-200', 'p-2', 'rounded', 'shadow-sm',
+        'text-sm', 'text-slate-950', 'dark:bg-neutral-900', 'dark:text-zinc-200', 'dark:border-neutral-600', 'border-none'
+      );
+      toolbar.container.style.border = 'none';
     
         quill.on('text-change', () => {
           setContent(quill.root.innerHTML); // update content state on text change
